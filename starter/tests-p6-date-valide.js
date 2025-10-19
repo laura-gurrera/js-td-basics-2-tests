@@ -44,7 +44,7 @@ switch (mois){
     case 'juillet':
     case 'août':
     case 'octobre':
-    case 'decembre':
+    case 'décembre':
         maxDays=31;
         break;
     case 'avril':
@@ -58,4 +58,4 @@ switch (mois){
         break;
 }
 
-(jour<=maxDays)? console.log(`Le ${jour} ${mois} ${annee} est une date valide`) : console.log(`Le ${jour} ${mois} ${annee} n'est pas une date valide`);
+(jour>0 && jour<=maxDays)? console.log(`Le ${jour} ${mois} ${annee} est une date valide`) : console.log(`Le ${jour} ${mois} ${annee} n'est pas une date valide`);
