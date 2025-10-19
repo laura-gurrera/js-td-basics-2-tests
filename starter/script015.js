@@ -19,6 +19,17 @@
 // 1. Demandez à l'utilisateur d'entrer un nombre et stockez-le dans une variable nombre
 // 2. Testez si le nombre est dans l'intervalle [0, 100]. Autrement dit, testez si 0 <= nombre <= 100. Si c'est le cas, affichez "… est compris entre 0 et 100".
 
+const nombre= parseInt(prompt('Entrez un nombre entre 0 et 100 [0-100]'));
+if(!isNaN(nombre)){
+    if(nombre>=0 && nombre<=100){
+        console.log(`${nombre} est compris entre 0 et 100`);
+    }else{
+        console.log(`${nombre} est n'est pas compris entre 0 et 100`);
+    }
+}else{
+    console.log(`Je ne comprends pas`);
+}
+
 // 2°) L'opérateur logique OU
 
 // 1. Affichez dans la console le résultat de toutes les combinaisons possibles de true OU false
@@ -28,6 +39,15 @@
 
 // 1. Demandez à l'utilisateur d'entrer un nombre et stockez-le dans une variable nombre
 // 2. Testez si le nombre est en dehors de l'intervalle [0, 100]. Si c'est le cas, affichez "… est en dehors de l'intervalle [0, 100]".
+
+const number= parseInt(prompt('Entrez un nombre'));
+if(!isNaN(number)){
+    if(number<0 || number>100){
+        console.log(`${number} est en dehors de l'intervalle [0, 100]`);
+    }else{
+        console.log(`${number} est en dans l'intervalle [0, 100]`);
+    }
+}
 
 // 3°) L'opérateur logique NOT
 

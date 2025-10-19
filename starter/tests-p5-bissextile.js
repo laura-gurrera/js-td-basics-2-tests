@@ -21,3 +21,12 @@ AUTREMENT DIT :
 
 N'oubliez pas de tester votre programme avec différentes années pour vérifier qu'il fonctionne correctement.
 */
+
+const year=parseInt(prompt('Entrez une année pour savoir si elle est bissextile: '));
+if(!isNaN(year)){
+    if(((year%100===0 && !(year%400===0)) || year%4!==0)){
+        console.log(`${year} est une année non bissextile`);
+    }else{
+        console.log(`${year} est une année bissextile`);
+    }
+}

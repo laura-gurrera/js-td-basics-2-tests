@@ -27,3 +27,35 @@ N'oubliez pas de tester votre programme avec diverses dates pour vous assurer qu
 
 Vous pouvez utiliser les exemples que vous avez fournis comme point de départ.
 */
+
+const jour= parseInt(prompt('Veillez entrez une date pour savoir si elle est valide ou pas. ' +
+    'Entrez ici le jour (ex: 19) : '));
+const mois= prompt('Veillez entrez une date pour savoir si elle est valide ou pas. ' +
+    'Entrez ici le mois (ex: octobre) : ');
+const annee= parseInt(prompt('Veillez entrez une date pour savoir si elle est valide ou pas. ' +
+    'Entrez ici l’année (ex: 2025) : '));
+
+let maxDays;
+
+switch (mois){
+    case 'janvier':
+    case 'mars':
+    case 'mai':
+    case 'juillet':
+    case 'août':
+    case 'octobre':
+    case 'decembre':
+        maxDays=31;
+        break;
+    case 'avril':
+    case 'juin':
+    case 'septembre':
+    case 'novembre':
+        maxDays=30;
+        break;
+    case 'février':
+        ((annee%100===0 && !(annee%400===0)) || annee%4!==0)? maxDays=28 : maxDays=29;
+        break;
+}
+
+(jour<=maxDays)? console.log(`Le ${jour} ${mois} ${annee} est une date valide`) : console.log(`Le ${jour} ${mois} ${annee} n'est pas une date valide`);

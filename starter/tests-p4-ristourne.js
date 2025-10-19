@@ -29,3 +29,13 @@ Valeurs de test :
 // 6. Si l'une des conditions de l'étape 4 ou de l'étape 5 est vraie, attribuez 10% de réduction (discount = montant des achats * 0.1).
 // 7. Sinon, attribuez 5% de réduction (discount = montant des achats * 0.05).
 // 8. Affichez le montant de la réduction (discount) en euros dans la console.
+
+let discount=0;
+const montantAchat= parseInt(prompt('Entrez le montant de vos achats: '));
+if(!isNaN(montantAchat)){
+    let nbEnfants=parseInt(prompt('Combien d’enfants avez-vous à charge? : '));
+    if(!isNaN(nbEnfants)){
+        ((montantAchat>50 && nbEnfants>=3) || montantAchat>125)? discount=(montantAchat*0.1).toFixed(2) :             discount=(montantAchat*0.05).toFixed(2);
+        console.log(`Vous avez une ristourne de ${discount}€`);
+    }
+}

@@ -22,6 +22,17 @@ BONNE CHANCE 😀
 */
 
 // sans bonus
+const JohnAverageScore= (89+120+103)/3; // 104
+const MikeAverageScore= (116+94+123)/3; // 111
+
+if(JohnAverageScore>MikeAverageScore){
+    console.log('L\'équipe de John à gagné!');
+}else if(MikeAverageScore>JohnAverageScore){
+    console.log('L\'équipe de Mike à gagné!');
+}else{
+    console.log('L\'équipe de Mike et de John sont ex æquo!');
+}
+
 
 // 1. Calculez le score moyen de chaque équipe.
 // 2. Décidez quelle équipe gagne en moyenne (celle qui a le plus haut score moyen)
@@ -36,3 +47,21 @@ BONNE CHANCE 😀
 //    INDICE : vous allez avoir besoin de l'opérateur && pour prendre la décision.
 // 5. Changez là aussi les scores pour générer différents gagnants,
 //    en gardant toujours en tête qu'il pourrait y avoir des ex æquos.
+
+const MaryAverageScore= (97+134+105)/3; // 112
+
+if (JohnAverageScore>MaryAverageScore && JohnAverageScore>MikeAverageScore){
+    console.log('L\'équipe de John à gagné!');
+}else if(MikeAverageScore>MaryAverageScore && MikeAverageScore>JohnAverageScore){
+    console.log('L\'équipe de Mike à gagné!');
+}else if(MaryAverageScore>JohnAverageScore && MaryAverageScore>MikeAverageScore){
+    console.log('L\'équipe de Mary à gagné!');
+}else if(JohnAverageScore===MikeAverageScore && JohnAverageScore>MaryAverageScore){
+    console.log('L\'équipe de John et de Mike gagnent avec un ex æquo!');
+}else if(JohnAverageScore===MaryAverageScore && JohnAverageScore>MikeAverageScore){
+    console.log('L\'équipe de John et de Mary gagnent avec un ex æquo!');
+}else if(MikeAverageScore===MaryAverageScore && MikeAverageScore>JohnAverageScore){
+    console.log('L\'équipe de Mike et de Mary gagnent avec un ex æquo!');
+}else{
+    console.log('Les 3 équipes sont ex æquo!');
+}
